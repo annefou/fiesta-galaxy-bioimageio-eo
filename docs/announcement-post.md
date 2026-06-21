@@ -30,7 +30,7 @@ And every step is a separate, signed, atomic nanopublication:
 🔗 The actual Galaxy runs (every tool version + parameter): https://usegalaxy.eu/u/annefou/h/fiesta-bioimage-io-on-eo
 🔗 Archived + citable: https://doi.org/10.5281/zenodo.20782777
 
-The Galaxy community meets next week at the Galaxy Community Conference. I'll miss it this year — but Beatriz [SURNAME / @handle], who leads OSCARS-FIESTA, will be there: find her to talk about reusable image-analysis workflows across disciplines.
+The Galaxy community is gathering this week at the Galaxy Community Conference. I'll miss it this year — but Beatriz [SURNAME / @handle], who leads OSCARS-FIESTA, will be there: find her to talk about reusable image-analysis workflows across disciplines.
 
 The science worked. The harder question is metadata: what shared vocabulary would let a workflow built in one discipline be discovered, trusted, and reused in another? What's missing in your field?
 
@@ -58,7 +58,7 @@ Galaxy runs: https://usegalaxy.eu/u/annefou/h/fiesta-bioimage-io-on-eo
 Archive: https://doi.org/10.5281/zenodo.20782777
 
 **5/**
-Next week is the Galaxy Community Conference. I'll miss it this year — but Beatriz [SURNAME / @handle], who leads OSCARS-FIESTA, will be there. Find her to talk reusable image-analysis workflows across disciplines.
+The Galaxy Community Conference is happening this week. I'll miss it this year — but Beatriz [SURNAME / @handle], who leads OSCARS-FIESTA, will be there. Find her to talk reusable image-analysis workflows across disciplines.
 
 **6/**
 The science worked. The open question is metadata: what shared vocabulary lets a workflow built in one discipline be found, trusted, and reused in another? What's missing in your field?
