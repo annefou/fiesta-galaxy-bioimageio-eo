@@ -14,7 +14,7 @@
 > **Galaxy bioimaging tools, applied cross-discipline to Earth Observation.**
 > A BioImage Model Zoo *nucleus-segmentation* model — trained only on fluorescence microscopy — run **unchanged** through a Galaxy workflow to segment water bodies (thermokarst ponds) in satellite imagery.
 
-Part of **OSCARS-FIESTA** (cross-image analysis *with Galaxy*). This is **not** a replication of a paper: it reuses and extends the Galaxy Training Network tutorial *"Using BioImage.IO models for image analysis in Galaxy"* ([`gxy.io/GTN:T00500`](https://gxy.io/GTN:T00500)) and the BioImage Model Zoo *NucleiSegmentationBoundaryModel* ([10.5281/zenodo.6647674](https://doi.org/10.5281/zenodo.6647674)), applying the same Galaxy workflow to Earth-observation data. It produces a reproducible pipeline, a Zenodo-archived release with a citable DOI, and a Science Live nanopublication chain.
+Part of **OSCARS-FIESTA** (cross-image analysis *with Galaxy*). This is **not** a replication of a paper: it reuses and extends the Galaxy Training Network tutorial *"Using BioImage.IO models for image analysis in Galaxy"* ([`gxy.io/GTN:T00534`](https://gxy.io/GTN:T00534)) and the BioImage Model Zoo *NucleiSegmentationBoundaryModel* ([10.5281/zenodo.6647674](https://doi.org/10.5281/zenodo.6647674)), applying the same Galaxy workflow to Earth-observation data. It produces a reproducible pipeline, a Zenodo-archived release with a citable DOI, and a Science Live nanopublication chain.
 
 ## Result
 
@@ -131,7 +131,7 @@ If you use this work, please cite:
 
 - This software: [`CITATION.cff`](CITATION.cff) → DOI minted on first release (see `{{ZENODO_DOI}}` placeholder).
 - The reused model: NucleiSegmentationBoundaryModel, BioImage Model Zoo — [10.5281/zenodo.6647674](https://doi.org/10.5281/zenodo.6647674).
-- The reused method: GTN tutorial *Using BioImage.IO models for image analysis in Galaxy* — [`gxy.io/GTN:T00500`](https://gxy.io/GTN:T00500).
+- The reused method: GTN tutorial *Using BioImage.IO models for image analysis in Galaxy* — [`gxy.io/GTN:T00534`](https://gxy.io/GTN:T00534).
 
 ## Acknowledgements
 

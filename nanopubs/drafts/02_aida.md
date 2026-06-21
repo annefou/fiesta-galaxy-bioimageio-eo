@@ -8,50 +8,37 @@
 
 ### AIDA sentence (textarea, required)
 
-Atomic, Independent, Declarative, Absolute. One empirical finding. Must end with a full stop.
-
-> _If your draft AIDA contains "and" linking two distinct findings, split into two AIDA nanopubs._
+Atomic, Independent, Declarative, Absolute. One empirical finding. Ends with a full stop.
 
 ```
-
+A BioImage Model Zoo nucleus-segmentation model, applied without retraining through a Galaxy workflow, delineates open-water bodies in Landsat imagery with a total water area agreeing with the NDWI water index to within about 30 percent.
 ```
 
 ### Select related topics/tags (dropdown, optional)
 
-Predefined topic vocabulary — list the labels you intend to pick from the dropdown.
+Intended labels (pick from the platform vocabulary if present):
 
 ```
-
+image segmentation; remote sensing; deep learning
 ```
 
 ### Relates to this nanopublication (text input, required)
 
-URI of the nanopub the AIDA derives from.
-
-- For paper-rooted chains: the Quote-with-comment URI (from step 01).
-- For question-rooted chains: the PICO or PCC URI (from step 01).
-
-Pull the URI from `nanopubs/PUBLISHED.md`.
+URI of the PICO published in step 01.
 
 ```
-
+<paste PICO URI from PUBLISHED.md step 01 after publishing>
 ```
 
 ### Supported by datasets (repeatable group, optional)
 
-DOIs/URLs of datasets that ground the AIDA claim.
-
-- _DOI 1: ___
-- _DOI 2: ___
+- Landsat Collection-2 Level-2 surface reflectance (Microsoft Planetary Computer): https://planetarycomputer.microsoft.com/dataset/landsat-c2-l2
 
 ### Supported by other publications (repeatable group, optional)
 
-DOIs/URLs of publications that support the AIDA claim — e.g. peer-reviewed methods papers, or the original paper if not already cited via the Quote.
+*(skip — optional. Left empty deliberately: see the known platform bug below — populating BOTH datasets and publications has caused publishing to fail. The reused model + tutorial are cited at the CiTO step 06 instead.)*
 
-- _DOI 1: ___
-- _DOI 2: ___
-
-> **Known platform bug (2026-04-26):** if both *Supported by datasets* AND *Supported by other publications* are populated and publishing fails, fall back to publishing this AIDA via Nanodash. The URI namespace becomes `https://w3id.org/np/...` (still valid and citable).
+> **Known platform bug (2026-04-26):** if both *Supported by datasets* AND *Supported by other publications* are populated and publishing fails, fall back to publishing this AIDA via Nanodash (URI namespace becomes `https://w3id.org/np/...`, still valid and citable).
 
 ## Publication note
 

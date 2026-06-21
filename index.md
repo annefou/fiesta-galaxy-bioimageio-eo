@@ -2,7 +2,7 @@
 
 > **Galaxy bioimaging tools, applied cross-discipline to Earth Observation.**
 >
-> Part of OSCARS-FIESTA. Reuses the GTN tutorial [`gxy.io/GTN:T00500`](https://gxy.io/GTN:T00500) and the BioImage Model Zoo model [10.5281/zenodo.6647674](https://doi.org/10.5281/zenodo.6647674).
+> Part of OSCARS-FIESTA. Reuses the GTN tutorial [`gxy.io/GTN:T00534`](https://gxy.io/GTN:T00534) and the BioImage Model Zoo model [10.5281/zenodo.6647674](https://doi.org/10.5281/zenodo.6647674).
 
 A BioImage Model Zoo *nucleus-segmentation* model — trained only on fluorescence microscopy — is run **unchanged** through a Galaxy workflow on **usegalaxy.eu** to segment water bodies (thermokarst ponds) in Landsat imagery. On a 2020 Alaska scene it found **152 ponds** (~221 km²), within ~5 % of the NDWI water index (~211 km²); across five scenes it stays within 0.74–1.19× of NDWI. This repository produces:
 
@@ -40,4 +40,4 @@ The published chain is listed in [`nanopubs/PUBLISHED.md`](nanopubs/PUBLISHED.md
 
 ## Citation
 
-If you use this work, please cite this software ([`CITATION.cff`](CITATION.cff), DOI minted on first release), plus the reused model ([10.5281/zenodo.6647674](https://doi.org/10.5281/zenodo.6647674)) and method ([`gxy.io/GTN:T00500`](https://gxy.io/GTN:T00500)).
+If you use this work, please cite this software ([`CITATION.cff`](CITATION.cff), DOI minted on first release), plus the reused model ([10.5281/zenodo.6647674](https://doi.org/10.5281/zenodo.6647674)) and method ([`gxy.io/GTN:T00534`](https://gxy.io/GTN:T00534)).

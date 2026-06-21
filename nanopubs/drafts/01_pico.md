@@ -1,13 +1,6 @@
-# 01 — PICO Research Question (question-rooted chains, comparative)
+# 01 — PICO Research Question (question-rooted, comparative)
 
-> Use this draft instead of `01_quote.md` if your chain is question-rooted with a clear comparator (X vs Y). For descriptive/scoping question-rooted chains, use `01_pcc.md`. See `docs/chain-decision-tree.md`.
->
-> Run the pre-flight checklist in `docs/forrt-form-fields.md` § Pre-flight checklist before drafting.
->
-> **After choosing the chain shape, delete the two step-1 alternates you aren't using.** Once you've decided this chain is question-rooted-comparative and keep `01_pico.md`, run:
-> ```bash
-> rm nanopubs/drafts/01_quote.md nanopubs/drafts/01_pcc.md
-> ```
+> Chain shape: **question-rooted, comparative** (no upstream paper; the claim is posed here, with NDWI as the comparator). See `docs/chain-decision-tree.md`. The `01_quote.md` and `01_pcc.md` alternates have been removed.
 
 **Form heading:** *"PICO Research Question — Define a research question using the PICO framework (Population, Intervention, Comparator, Outcome)"*
 
@@ -15,66 +8,54 @@
 
 ### Short ID (text input, required)
 
-Slug becomes part of the nanopub URI. Use kebab-case.
-
 ```
-
+bmz-nuclei-model-eo-water
 ```
 
 ### Research Question Title (text input, required)
 
-10-200 characters. Length-bounded.
+10–200 characters.
 
 ```
-
+Can a bioimaging nucleus-segmentation model segment open water in satellite imagery via Galaxy?
 ```
 
 ### Complete Research Question (textarea, required)
 
-One coherent sentence/paragraph that names P, I, C, O inline.
-
 ```
-
+In Landsat satellite imagery of an Arctic thermokarst-pond landscape (Population), does a BioImage Model Zoo nucleus-segmentation deep-learning model applied without retraining through a Galaxy BioImage.IO workflow (Intervention), compared with the standard NDWI water index (Comparator), delineate open-water bodies with a comparable total water area and number of distinct bodies (Outcome)?
 ```
 
 ### Question Type (radio button, required)
 
 - [ ] Causation
 - [ ] Descriptive
-- [ ] Effectiveness
+- [x] Effectiveness
 - [ ] Experience
 - [ ] Prediction
 
 ### Population (P) (textarea, required)
 
-Who/what is being studied. Discipline-level concept — not implementation. See `docs/pico-study-outcome-levels.md`.
-
 ```
-
+Optical multispectral satellite imagery of landscapes containing many small open-water bodies — here Landsat surface-reflectance scenes of the Arctic Coastal Plain of northern Alaska, a terrain dense with thermokarst ponds.
 ```
 
 ### Intervention (I) (textarea, required)
 
-The intervention or exposure being examined. Discipline-level concept.
-
 ```
-
+A deep-learning nucleus/boundary-segmentation model from the BioImage Model Zoo, originally trained on fluorescence-microscopy images of cell nuclei, applied without retraining to the satellite imagery through a Galaxy BioImage.IO inference workflow — i.e. a cross-discipline transfer of a bioimaging segmentation model to remote sensing.
 ```
 
 ### Comparison (C) (textarea, required)
 
-The comparison or control condition. Discipline-level concept.
-
 ```
-
+The Normalized Difference Water Index (NDWI), the standard remote-sensing index for delineating surface water from green and near-infrared reflectance.
 ```
 
 ### Outcome (O) (textarea, required)
 
-What outcomes are being measured. The kind of measurement, not the value.
-
 ```
-
+Delineation of open-water bodies — the total water area and the count of distinct water bodies — and the degree to which these agree with the NDWI baseline.
 ```
 
 ## Publication note

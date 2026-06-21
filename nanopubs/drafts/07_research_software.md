@@ -1,8 +1,8 @@
-# 07 — Research Software (optional)
+# 07 — Research Software (optional layer)
 
 > Run the pre-flight checklist in `docs/forrt-form-fields.md` § Pre-flight checklist before drafting.
 >
-> **Scope check:** Research Software nanopubs describe **reusable software artefacts** — tools people would `pip install` or `git clone` to use in their own work. They do NOT describe one-off demo / reproduction repos. If your repo is a reproduction of someone else's paper, the reusable artefact is the *upstream library* it uses (e.g. `foscat`, `planktonclas`), not your reproduction repo. Author the Research Software nanopub for the upstream tool, not the demo. See `CLAUDE.md` § Layered architecture: FORRT vs Research Software.
+> **Scope note:** the reusable artefact here is the **parameterised Galaxy BioImage.IO inference workflow plus its BioBlend driver** (`workflow/main_workflow.ga` + `scripts/galaxy_workflow.py`) — others can `git clone` it and point the same workflow at their own imagery / region / model. That is a reusable cross-image-analysis tool, not a one-off paper reproduction, so a Research Software nanopub is appropriate. (The upstream Galaxy tool and the BMZ model are credited separately at the CiTO step.)
 
 **Form heading:** *"Research Software — Describe research software with metadata including repository, supporting publications, and related resources."*
 
@@ -10,18 +10,17 @@
 
 ### URI of published software (text input, required)
 
-Zenodo concept DOI URL when available, or a GitHub URL. Full URL form.
+Zenodo concept DOI URL once minted at first release; until then, the GitHub URL.
 
 ```
-{{ZENODO_DOI}}
+https://github.com/annefou/fiesta-galaxy-bioimageio-eo
 ```
+*(Replace with the Zenodo concept DOI — `{{ZENODO_DOI}}` — after the first GitHub release.)*
 
 ### Software Title (text input, required)
 
-The full name or title of the software.
-
 ```
-
+FIESTA — Galaxy BioImage.IO workflow for cross-discipline Earth-observation water segmentation
 ```
 
 ### Repository URL (text input, required)
@@ -32,10 +31,10 @@ https://github.com/annefou/fiesta-galaxy-bioimageio-eo
 
 ### Research Project (text input, optional)
 
-URI of the FORRT Claim or PCC question this software is associated with — pull from `nanopubs/PUBLISHED.md`. This is the back-link to the FORRT chain.
+Back-link to the FORRT Claim at the head of the chain.
 
 ```
-
+<paste Claim URI from PUBLISHED.md step 03 after publishing>
 ```
 
 ### License (text input, optional)
@@ -46,17 +45,13 @@ https://spdx.org/licenses/MIT.html
 
 ### Related Datasets (repeatable group, optional)
 
-Input data DOIs (Zenodo data records, dataset DOIs, ESA product DOIs).
-
-- _Dataset URL 1: ___
-- _Dataset URL 2: ___
+- https://planetarycomputer.microsoft.com/dataset/landsat-c2-l2
 
 ### Related Publications (repeatable group, optional)
 
-One-way back-links to the FORRT Outcome URI(s) the software implements, plus any cited methods papers.
-
-- _Publication URL 1 (FORRT Outcome from step 05): ___
-- _Publication URL 2 (methods paper, optional): ___
+- `<paste Outcome URI from PUBLISHED.md step 05 after publishing>` (the FORRT Outcome this software implements)
+- https://gxy.io/GTN:T00534 (reused Galaxy training/method)
+- https://doi.org/10.5281/zenodo.6647674 (reused BioImage Model Zoo model)
 
 ## Publication note
 
