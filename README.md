@@ -102,17 +102,19 @@ This template bakes in conventions that took multiple replications to discover. 
 - **Layered AI guidance** — `CLAUDE.md` (universal) + `DOMAIN.md` (swappable per field) + `USER_PREFERENCES.md` (per-user). See [`docs/ai-portability.md`](docs/ai-portability.md) for non-Claude AI tools.
 - **Sandbox by default** — `.claude/settings.json` denies file ops outside the repo, so a fresh AI session can't accidentally read `~/.ssh/` or write to `/etc/`.
 
-## The six FORRT chain steps
+## FORRT nanopublication chain — published
 
-A complete FORRT chain has six steps published on [platform.sciencelive4all.org](https://platform.sciencelive4all.org):
+This work's FORRT chain is **published** on [platform.sciencelive4all.org](https://platform.sciencelive4all.org) (question-rooted: PICO → AIDA → Claim → Study → Outcome → CiTO, plus a Research Software nanopub). The full URI registry is in [`nanopubs/PUBLISHED.md`](nanopubs/PUBLISHED.md):
 
-```
-Quote-with-comment  →  AIDA  →  FORRT Claim  →  Replication Study  →  Replication Outcome  →  CiTO Citation
-```
-
-(For question-rooted chains with no upstream paper, replace step 1 with PICO or PCC. See [`docs/chain-decision-tree.md`](docs/chain-decision-tree.md).)
-
-Drafts live in [`nanopubs/drafts/`](nanopubs/drafts/) field-by-field. Published URIs go into [`nanopubs/PUBLISHED.md`](nanopubs/PUBLISHED.md).
+| Step | Nanopub |
+|---|---|
+| PICO question | [RAHSt0SA…](https://w3id.org/sciencelive/np/RAHSt0SAMA5XrHxNMDwauFeL_zVChpuSPbfyfTJwA2014) |
+| AIDA sentence | [RAjY2mFq…](https://w3id.org/sciencelive/np/RAjY2mFqm8B98kq2NmmCX2cjWCEg5Jpb6uLWvuLyXJO_g) |
+| FORRT Claim | [RAKk1tec…](https://w3id.org/sciencelive/np/RAKk1teclzemmIuU0wUR4hNXE0ZyuCKOQbRhQRVRXMTJA) |
+| Replication Study | [RAzxasLj…](https://w3id.org/sciencelive/np/RAzxasLjpd21-0cbBRwlKEbmprb2guev7X3pOhvrPE3yo) |
+| Replication Outcome | [RA0djoTf…](https://w3id.org/sciencelive/np/RA0djoTfiMWeJJs7YSlUorGPs5sqRJLwpLPPBYHKSfrmQ) |
+| CiTO Citation | [RAMxuAhH…](https://w3id.org/sciencelive/np/RAMxuAhHzl1FLSr6_X5gYBibgBbN9Jh-fDdJfFcfCM6E0) |
+| Research Software | [RAOAVrhy…](https://w3id.org/sciencelive/np/RAOAVrhyWdvB-Z2IXaUHpA8w-dd4DYHj4KF3SnXQ_zL28) |
 
 Optional further layers:
 

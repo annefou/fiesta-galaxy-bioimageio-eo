@@ -36,7 +36,15 @@ docker run --rm ghcr.io/annefou/fiesta-galaxy-bioimageio-eo:latest
 
 ## Nanopublication chain
 
-The published chain is listed in [`nanopubs/PUBLISHED.md`](nanopubs/PUBLISHED.md). Each step links to its viewer URL on the Science Live platform.
+The FORRT chain for this work is **published** on the Science Live platform (full registry in [`nanopubs/PUBLISHED.md`](nanopubs/PUBLISHED.md)):
+
+1. **PICO question** — [RAHSt0SA…](https://w3id.org/sciencelive/np/RAHSt0SAMA5XrHxNMDwauFeL_zVChpuSPbfyfTJwA2014)
+2. **AIDA sentence** — [RAjY2mFq…](https://w3id.org/sciencelive/np/RAjY2mFqm8B98kq2NmmCX2cjWCEg5Jpb6uLWvuLyXJO_g)
+3. **FORRT Claim** — [RAKk1tec…](https://w3id.org/sciencelive/np/RAKk1teclzemmIuU0wUR4hNXE0ZyuCKOQbRhQRVRXMTJA)
+4. **Replication Study** — [RAzxasLj…](https://w3id.org/sciencelive/np/RAzxasLjpd21-0cbBRwlKEbmprb2guev7X3pOhvrPE3yo)
+5. **Replication Outcome** — [RA0djoTf…](https://w3id.org/sciencelive/np/RA0djoTfiMWeJJs7YSlUorGPs5sqRJLwpLPPBYHKSfrmQ)
+6. **CiTO Citation** — [RAMxuAhH…](https://w3id.org/sciencelive/np/RAMxuAhHzl1FLSr6_X5gYBibgBbN9Jh-fDdJfFcfCM6E0)
+7. **Research Software** — [RAOAVrhy…](https://w3id.org/sciencelive/np/RAOAVrhyWdvB-Z2IXaUHpA8w-dd4DYHj4KF3SnXQ_zL28)
 
 ## Citation
 
