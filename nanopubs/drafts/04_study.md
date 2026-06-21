@@ -55,7 +55,6 @@ Relative to the original Galaxy microscopy tutorial, only the input domain chang
 ### Search keywords (Wikidata) (multi-select, optional)
 
 - image segmentation
-- remote sensing
 - deep learning
 - thermokarst
 
