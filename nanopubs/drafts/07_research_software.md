@@ -10,12 +10,11 @@
 
 ### URI of published software (text input, required)
 
-Zenodo concept DOI URL once minted at first release; until then, the GitHub URL.
+Zenodo concept DOI URL (minted at the v0.1.0 release).
 
 ```
-https://github.com/annefou/fiesta-galaxy-bioimageio-eo
+https://doi.org/10.5281/zenodo.20782777
 ```
-*(Replace with the Zenodo concept DOI — `{{ZENODO_DOI}}` — after the first GitHub release.)*
 
 ### Software Title (text input, required)
 

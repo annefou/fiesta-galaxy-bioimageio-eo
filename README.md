@@ -4,7 +4,7 @@
 [![Jupyter Book](https://github.com/annefou/fiesta-galaxy-bioimageio-eo/actions/workflows/jupyter-book.yml/badge.svg)](https://annefou.github.io/fiesta-galaxy-bioimageio-eo/)
 [![Docker](https://github.com/annefou/fiesta-galaxy-bioimageio-eo/actions/workflows/docker.yml/badge.svg)](https://github.com/annefou/fiesta-galaxy-bioimageio-eo/pkgs/container/fiesta-galaxy-bioimageio-eo)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![DOI](https://zenodo.org/badge/DOI/{{ZENODO_DOI}}.svg)]({{ZENODO_DOI}})
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20782777.svg)](https://doi.org/10.5281/zenodo.20782777)
 [![FAIR4RS](https://img.shields.io/badge/FAIR4RS-conformant-brightgreen)](docs/fair4rs-checklist.md)
 [![FORRT](https://img.shields.io/badge/FORRT-replication-blue)](https://forrt.org/)
 [![Science Live](https://img.shields.io/badge/Science%20Live-nanopub%20chain-purple)](nanopubs/PUBLISHED.md)
@@ -129,7 +129,7 @@ For lower-level nanopub work — retraction, superseding, batch publishing — s
 
 If you use this work, please cite:
 
-- This software: [`CITATION.cff`](CITATION.cff) → DOI minted on first release (see `{{ZENODO_DOI}}` placeholder).
+- This software: [`CITATION.cff`](CITATION.cff) → concept DOI [10.5281/zenodo.20782777](https://doi.org/10.5281/zenodo.20782777) (resolves to the latest version).
 - The reused model: NucleiSegmentationBoundaryModel, BioImage Model Zoo — [10.5281/zenodo.6647674](https://doi.org/10.5281/zenodo.6647674).
 - The reused method: GTN tutorial *Using BioImage.IO models for image analysis in Galaxy* — [`gxy.io/GTN:T00534`](https://gxy.io/GTN:T00534).
 
