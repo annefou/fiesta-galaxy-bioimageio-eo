@@ -5,6 +5,12 @@
 > disciplinary boundaries. No author tagging, no bot signatures, ~5 tags.
 >
 > Fill the three 🔗 links before posting (already filled below).
+>
+> **Suggested lead image:** `figures/announcement_figure.png` — "One BioImage.IO model,
+> two disciplines": the microscopy nuclei it was trained on (left) beside the Landsat
+> lakes it segmented unchanged (right, 152 ponds outlined). It carries the cross-discipline
+> message in one glance. Secondary option: `figures/main_result.png` (input → segmentation
+> → NDWI). For a data-forward post, `figures/robustness.png` (BMZ vs NDWI across 5 scenes).
 
 ---
 
