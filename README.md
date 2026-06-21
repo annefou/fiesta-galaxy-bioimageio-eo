@@ -26,7 +26,7 @@ On a 2020 Landsat scene of the Alaska Arctic Coastal Plain, the bioimaging model
 
 This repo foregrounds the **Galaxy** path (FIESTA is about cross-image analysis *with Galaxy*):
 
-- **Galaxy (showcased):** `notebooks/03_analysis.py` invokes [`workflow/main_workflow.ga`](workflow/main_workflow.ga) on **usegalaxy.eu** via BioBlend. Needs a usegalaxy.eu API key at `~/.galaxy_eu_key`. The real invocation (with provenance) is the headline artifact.
+- **Galaxy (showcased):** `notebooks/03_analysis.py` invokes [`workflow/main_workflow.ga`](workflow/main_workflow.ga) on **usegalaxy.eu** via BioBlend. Needs a usegalaxy.eu API key at `~/.galaxy_eu_key`. The actual runs are **public** — inspect tool versions, parameters and datasets in the [shared Galaxy history](https://usegalaxy.eu/u/annefou/h/fiesta-bioimage-io-on-eo) (invocation IDs in [`results/galaxy_provenance.json`](results/galaxy_provenance.json)).
 - **Local fallback (CI / hermetic):** the *same algorithm* offline (TorchScript `torch.load` + `foreground − boundaries` + threshold 0.6 + connected-component label) — **validated byte-identical** to the Galaxy mask (IoU = 1.000); local and Galaxy give the same water area and pond count on all five scenes (2020: 152 both ways) — so the Jupyter Book builds without a key.
 
 ---

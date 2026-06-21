@@ -1,5 +1,6 @@
 {
   "engine": "galaxy:usegalaxy.eu",
+  "public_history_url": "https://usegalaxy.eu/u/annefou/h/fiesta-bioimage-io-on-eo",
   "workflow": "workflow/main_workflow.ga",
   "model": "NucleiSegmentationBoundaryModel (10.5281/zenodo.6647674), TorchScript",
   "runs": [
