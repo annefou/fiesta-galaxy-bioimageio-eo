@@ -36,9 +36,10 @@ URI of the PICO published in step 01.
 
 ### Supported by other publications (repeatable group, optional)
 
-*(skip — optional. Left empty deliberately: see the known platform bug below — populating BOTH datasets and publications has caused publishing to fail. The reused model + tutorial are cited at the CiTO step 06 instead.)*
+- BioImage Model Zoo NucleiSegmentationBoundaryModel: https://doi.org/10.5281/zenodo.6647674
+- Galaxy Training Network tutorial (method): https://gxy.io/GTN:T00534
 
-> **Known platform bug (2026-04-26):** if both *Supported by datasets* AND *Supported by other publications* are populated and publishing fails, fall back to publishing this AIDA via Nanodash (URI namespace becomes `https://w3id.org/np/...`, still valid and citable).
+> **Note:** the earlier platform bug where populating BOTH *Supported by datasets* AND *Supported by other publications* caused publishing to fail has been **fixed (2026-06-21)**, so both groups are populated here.
 
 ## Publication note
 

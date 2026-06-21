@@ -49,7 +49,7 @@ Form heading: *"AIDA Sentence — Make structured scientific claims following th
 
 **Atomic AIDA rule:** one AIDA sentence states one empirical finding. If your draft AIDA contains "and" linking two distinct findings, split it into two AIDA nanopubs anchored on two separate Claims. The whole point of AIDA is composability — non-atomic AIDAs cannot be cited individually.
 
-**Known platform bug (2026-04-26):** publishing on Science Live with both *Supported by datasets* AND *Supported by other publications* fields populated has previously caused the platform to fail. Workaround if it happens again: publish the AIDA via Nanodash instead (URI namespace becomes `https://w3id.org/np/...` rather than `https://w3id.org/sciencelive/np/...`). The nanopub is valid and citable; the chain just has a mixed-namespace URI.
+**Platform bug — FIXED (2026-06-21):** publishing on Science Live with both *Supported by datasets* AND *Supported by other publications* fields populated previously caused the platform to fail (first seen 2026-04-26). This has been fixed; both groups can now be populated together. (Historical workaround, no longer needed: publish via Nanodash, whose URI namespace is `https://w3id.org/np/...` rather than `https://w3id.org/sciencelive/np/...` — still valid and citable.)
 
 ---
 
