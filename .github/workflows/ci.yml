@@ -58,7 +58,9 @@ jobs:
 
       - name: Run pipeline
         if: steps.guard.outputs.ready == 'true'
-        run: pixi run snakemake --cores 1
+        env:
+          FIESTA_ENGINE: local   # no Galaxy key in CI -> byte-identical local fallback
+        run: pixi run snakemake --cores 1 --forceall
 
       - name: Upload results
         if: always() && steps.guard.outputs.ready == 'true'

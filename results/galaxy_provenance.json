@@ -1,0 +1,42 @@
+{
+  "engine": "galaxy:usegalaxy.eu",
+  "workflow": "workflow/main_workflow.ga",
+  "model": "NucleiSegmentationBoundaryModel (10.5281/zenodo.6647674), TorchScript",
+  "runs": [
+    {
+      "year": 2000,
+      "invocation_id": "627bd9306d1c193a",
+      "n_ponds": 152,
+      "bmz_area_km2": 198.09,
+      "ndwi_area_km2": 266.04
+    },
+    {
+      "year": 2005,
+      "invocation_id": "a59edacd2b742153",
+      "n_ponds": 200,
+      "bmz_area_km2": 222.87,
+      "ndwi_area_km2": 187.05
+    },
+    {
+      "year": 2010,
+      "invocation_id": "c2dfa42fdbc1d516",
+      "n_ponds": 135,
+      "bmz_area_km2": 200.79,
+      "ndwi_area_km2": 240.02
+    },
+    {
+      "year": 2015,
+      "invocation_id": "c590ce422632d6f1",
+      "n_ponds": 163,
+      "bmz_area_km2": 170.1,
+      "ndwi_area_km2": 187.36
+    },
+    {
+      "year": 2020,
+      "invocation_id": "3b97f5635a2b3dee",
+      "n_ponds": 152,
+      "bmz_area_km2": 221.36,
+      "ndwi_area_km2": 211.41
+    }
+  ]
+}
