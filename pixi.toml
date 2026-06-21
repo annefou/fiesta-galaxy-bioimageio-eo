@@ -1,0 +1,64 @@
+# Single source of truth for the runtime — used by local dev, Docker, and CI.
+# Add every dependency a notebook imports here. Local "kitchen-sink" envs
+# (e.g. pangeo) hide missing deps; CI builds strictly from this file and will
+# silently produce empty notebook cells if anything is missing.
+#
+# pixi.lock (committed alongside this file) pins every package to an exact
+# build hash per platform. Regenerate it with `pixi install` after editing
+# this file; commit both files in the same commit.
+
+[workspace]
+name = "fiesta-galaxy-bioimageio-eo"
+# bioconda hosts snakemake (and downstream rule-engine ecosystem); conda-forge
+# is the priority channel for everything else.
+channels = ["conda-forge", "bioconda"]
+platforms = ["linux-64", "osx-arm64", "win-64"]
+
+[dependencies]
+python = "3.12.*"
+# --- core scientific stack ---
+numpy = "*"
+pandas = ">=2.0"
+xarray = ">=2024.6"
+scipy = "*"                  # ndimage.label for the local-fallback label map
+matplotlib = "*"
+pyarrow = "*"
+netcdf4 = "*"               # NetCDF intermediates (never .npz — see DOMAIN.md)
+# --- notebook execution + Jupyter Book ---
+jupytext = "*"
+jupyterlab = "*"
+nbclient = "*"
+ipykernel = "*"
+# --- pipeline driver ---
+snakemake = "*"
+# --- Earth-observation data access (Microsoft Planetary Computer STAC) ---
+pystac-client = "*"
+planetary-computer = "*"
+odc-stac = "*"
+rioxarray = "*"
+rasterio = "*"
+# --- imaging I/O (PNG/TIFF for the BioImage.IO model) ---
+imageio = "*"
+scikit-image = "*"
+pillow = "*"
+tifffile = "*"
+# --- Galaxy command-line driver ---
+bioblend = "*"              # invoke the BioImage.IO workflow on usegalaxy.eu
+# --- local same-algorithm fallback (CI/hermetic; replicates the Galaxy tool) ---
+pytorch = "*"              # torch.load(TorchScript) + model(x); CI may pin a cpu build
+
+[feature.docs.dependencies]
+mystmd = "*"
+
+[feature.tests.dependencies]
+pytest = "*"
+
+[environments]
+default = { solve-group = "default" }
+docs = { features = ["docs"], solve-group = "default" }
+tests = { features = ["tests"], solve-group = "default" }
+
+[tasks]
+run = "snakemake --cores 1"
+book = "myst build --html"
+lab = "jupyter lab"

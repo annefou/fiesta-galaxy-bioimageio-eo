@@ -1,0 +1,37 @@
+cff-version: 1.2.0
+title: "fiesta-galaxy-bioimageio-eo"
+message: "If you use this software, please cite it as below."
+type: software
+authors:
+  - family-names: "Fouilloux"
+    given-names: "Anne"
+    orcid: "https://orcid.org/0000-0002-1784-2920"
+    affiliation: "Lifewatch ERIC"
+repository-code: "https://github.com/annefou/fiesta-galaxy-bioimageio-eo"
+license: MIT
+version: "0.1.0"
+date-released: "2026-06-20"
+# After your first GitHub release the Zenodo integration mints a concept DOI.
+# Replace this once available (run /init-template again or edit by hand):
+doi: "{{ZENODO_DOI}}"
+identifiers:
+  - type: doi
+    value: "{{ZENODO_DOI}}"
+    description: "Concept DOI (resolves to the latest version)"
+keywords:
+  - replication
+  - reproducibility
+  - FORRT
+  - nanopublication
+  - Science-Live
+references:
+  - type: article
+    title: "Using BioImage.IO models for image analysis in Galaxy (Galaxy Training Network)"
+    authors:
+      - family-names: "Chiang Jurado"
+        given-names: "Diana"
+    year: "2025"
+    doi: "10.5281/zenodo.6647674"
+  - type: url
+    title: "Using BioImage.IO models for image analysis in Galaxy — GTN tutorial"
+    url: "https://gxy.io/GTN:T00500"
