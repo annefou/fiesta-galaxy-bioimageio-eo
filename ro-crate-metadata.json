@@ -1,139 +1,409 @@
 {
-  "@context": "https://w3id.org/ro/crate/1.2/context",
-  "@graph": [
-    {
-      "@type": "CreativeWork",
-      "@id": "ro-crate-metadata.json",
-      "conformsTo": [
-        { "@id": "https://w3id.org/ro/crate/1.2" },
-        { "@id": "https://w3id.org/ro/wfrun/process/0.5" },
-        { "@id": "https://w3id.org/workflowhub/workflow-ro-crate/1.0" }
-      ],
-      "about": { "@id": "./" }
-    },
-    {
-      "@id": "./",
-      "@type": ["Dataset", "ResearchObject"],
-      "name": "fiesta-galaxy-bioimageio-eo",
-      "description": "Cross-discipline demonstration: a BioImage Model Zoo nucleus-segmentation model run through a Galaxy workflow to segment water bodies in Earth-observation imagery (OSCARS-FIESTA).",
-      "datePublished": "2026-06-20",
-      "license": { "@id": "https://spdx.org/licenses/MIT" },
-      "publisher": { "@id": "https://orcid.org/0000-0002-1784-2920" },
-      "author": [{ "@id": "https://orcid.org/0000-0002-1784-2920" }],
-      "mainEntity": { "@id": "Snakefile" },
-      "hasPart": [
-        { "@id": "Snakefile" },
-        { "@id": "pixi.toml" },
-        { "@id": "pixi.lock" },
-        { "@id": "Dockerfile" },
-        { "@id": "notebooks/01_data_download.py" },
-        { "@id": "notebooks/02_data_clean.py" },
-        { "@id": "notebooks/03_analysis.py" },
-        { "@id": "notebooks/04_figures.py" },
-        { "@id": "paper/" },
-        { "@id": "data/" },
-        { "@id": "results/" },
-        { "@id": "figures/" },
-        { "@id": "nanopubs/PUBLISHED.md" }
-      ],
-      "citation": [
-        { "@id": "https://doi.org/10.5281/zenodo.6647674" }
-      ]
-    },
-    {
-      "@id": "https://orcid.org/0000-0002-1784-2920",
-      "@type": "Person",
-      "name": "Anne Fouilloux",
-      "affiliation": "Lifewatch ERIC"
-    },
-    {
-      "@id": "Snakefile",
-      "@type": ["File", "SoftwareSourceCode", "ComputationalWorkflow"],
-      "name": "Replication pipeline",
-      "description": "Snakemake workflow orchestrating data download, cleaning, analysis, and figure generation.",
-      "programmingLanguage": { "@id": "https://w3id.org/workflowhub/workflow-ro-crate#snakemake" },
-      "input": [{ "@id": "paper/" }, { "@id": "pixi.toml" }, { "@id": "pixi.lock" }],
-      "output": [{ "@id": "results/" }, { "@id": "figures/" }, { "@id": "nanopubs/PUBLISHED.md" }]
-    },
-    {
-      "@id": "https://w3id.org/workflowhub/workflow-ro-crate#snakemake",
-      "@type": "ComputerLanguage",
-      "name": "Snakemake",
-      "url": "https://snakemake.readthedocs.io/"
-    },
-    {
-      "@id": "pixi.toml",
-      "@type": ["File", "ConfigurationFile"],
-      "name": "Pixi workspace manifest (declared dependencies, features, tasks)",
-      "encodingFormat": "application/toml"
-    },
-    {
-      "@id": "pixi.lock",
-      "@type": ["File", "ConfigurationFile"],
-      "name": "Pixi per-platform lockfile (every package pinned to an exact build hash)",
-      "encodingFormat": "application/yaml"
-    },
-    {
-      "@id": "Dockerfile",
-      "@type": ["File", "ConfigurationFile"],
-      "name": "Container build specification",
-      "encodingFormat": "text/x-dockerfile"
-    },
-    {
-      "@id": "notebooks/01_data_download.py",
-      "@type": ["File", "SoftwareSourceCode", "Notebook"],
-      "name": "01 — Data download",
-      "programmingLanguage": "Python"
-    },
-    {
-      "@id": "notebooks/02_data_clean.py",
-      "@type": ["File", "SoftwareSourceCode", "Notebook"],
-      "name": "02 — Data clean",
-      "programmingLanguage": "Python"
-    },
-    {
-      "@id": "notebooks/03_analysis.py",
-      "@type": ["File", "SoftwareSourceCode", "Notebook"],
-      "name": "03 — Analysis",
-      "programmingLanguage": "Python"
-    },
-    {
-      "@id": "notebooks/04_figures.py",
-      "@type": ["File", "SoftwareSourceCode", "Notebook"],
-      "name": "04 — Figures",
-      "programmingLanguage": "Python"
-    },
-    {
-      "@id": "paper/",
-      "@type": "Dataset",
-      "name": "Source paper PDF (drop yours here)"
-    },
-    {
-      "@id": "data/",
-      "@type": "Dataset",
-      "name": "Downloaded input data (gitignored; populated by 01_data_download.py)"
-    },
-    {
-      "@id": "results/",
-      "@type": "Dataset",
-      "name": "Analysis output artefacts"
-    },
-    {
-      "@id": "figures/",
-      "@type": "Dataset",
-      "name": "Curated figures used in the Jupyter Book"
-    },
-    {
-      "@id": "nanopubs/PUBLISHED.md",
-      "@type": ["File", "TextObject"],
-      "name": "Registry of published FORRT nanopub URIs",
-      "description": "URIs of the published Quote / AIDA / FORRT Claim / Replication Study / Replication Outcome / CiTO Citation steps."
-    },
-    {
-      "@id": "https://doi.org/10.5281/zenodo.6647674",
-      "@type": "ScholarlyArticle",
-      "name": "Using BioImage.IO models for image analysis in Galaxy (Galaxy Training Network)",
-      "datePublished": "2025"
-    }
-  ]
+    "@context": "https://w3id.org/ro/crate/1.2/context",
+    "@graph": [
+        {
+            "@id": "./",
+            "@type": "Dataset",
+            "author": {
+                "@id": "https://orcid.org/0000-0002-1784-2920"
+            },
+            "citation": {
+                "@id": "https://gxy.io/GTN:T00500"
+            },
+            "codeRepository": "https://github.com/annefou/fiesta-galaxy-bioimageio-eo",
+            "conformsTo": [
+                {
+                    "@id": "https://w3id.org/np/RAQXwdUrfZ40k2MdeDv9fokzyh35UKuN3w17G2yO4Wm8A"
+                }
+            ],
+            "contentLocation": {
+                "@id": "#study-area"
+            },
+            "datePublished": "2026-06-20",
+            "description": "Cross-discipline demonstration: a BioImage Model Zoo nucleus-segmentation model run through a Galaxy workflow to segment water bodies in Earth-observation imagery (OSCARS-FIESTA).",
+            "funder": {
+                "@id": "https://ror.org/00k4n6c32"
+            },
+            "funding": {
+                "@id": "https://cordis.europa.eu/project/id/101129751"
+            },
+            "hasPart": [
+                {
+                    "@id": "Snakefile"
+                },
+                {
+                    "@id": "workflow/main_workflow.ga"
+                },
+                {
+                    "@id": "notebooks/01_data_download.py"
+                },
+                {
+                    "@id": "notebooks/02_data_clean.py"
+                },
+                {
+                    "@id": "notebooks/03_analysis.py"
+                },
+                {
+                    "@id": "notebooks/04_figures.py"
+                },
+                {
+                    "@id": "pixi.toml"
+                },
+                {
+                    "@id": "Dockerfile"
+                },
+                {
+                    "@id": "results/galaxy_provenance.json"
+                },
+                {
+                    "@id": "figures/main_result.png"
+                },
+                {
+                    "@id": "figures/robustness.png"
+                },
+                {
+                    "@id": "https://doi.org/10.5281/zenodo.6647674"
+                },
+                {
+                    "@id": "https://planetarycomputer.microsoft.com/dataset/landsat-c2-l2"
+                },
+                {
+                    "@id": "https://doi.org/10.5281/zenodo.20782777"
+                }
+            ],
+            "identifier": {
+                "@id": "#version-doi"
+            },
+            "keywords": [
+                "replication",
+                "reproducibility",
+                "FORRT",
+                "nanopublication",
+                "Science-Live"
+            ],
+            "license": {
+                "@id": "https://spdx.org/licenses/MIT"
+            },
+            "mainEntity": {
+                "@id": "workflow/main_workflow.ga"
+            },
+            "name": "Galaxy bioimaging tools applied to Earth observation: a BioImage.IO nucleus-segmentation model maps thermokarst ponds (OSCARS-FIESTA)",
+            "publisher": {
+                "@id": "https://ror.org/02a8eka68"
+            },
+            "sameAs": {
+                "@id": "https://doi.org/10.5281/zenodo.20782777"
+            },
+            "subjectOf": [
+                {
+                    "@id": "https://w3id.org/sciencelive/np/RAHSt0SAMA5XrHxNMDwauFeL_zVChpuSPbfyfTJwA2014"
+                },
+                {
+                    "@id": "https://w3id.org/sciencelive/np/RAjY2mFqm8B98kq2NmmCX2cjWCEg5Jpb6uLWvuLyXJO_g"
+                },
+                {
+                    "@id": "https://w3id.org/sciencelive/np/RAKk1teclzemmIuU0wUR4hNXE0ZyuCKOQbRhQRVRXMTJA"
+                },
+                {
+                    "@id": "https://w3id.org/sciencelive/np/RAzxasLjpd21-0cbBRwlKEbmprb2guev7X3pOhvrPE3yo"
+                },
+                {
+                    "@id": "https://w3id.org/sciencelive/np/RA0djoTfiMWeJJs7YSlUorGPs5sqRJLwpLPPBYHKSfrmQ"
+                },
+                {
+                    "@id": "https://w3id.org/sciencelive/np/RAMxuAhHzl1FLSr6_X5gYBibgBbN9Jh-fDdJfFcfCM6E0"
+                }
+            ],
+            "version": "0.1.0"
+        },
+        {
+            "@id": "ro-crate-metadata.json",
+            "@type": "CreativeWork",
+            "about": {
+                "@id": "./"
+            },
+            "conformsTo": {
+                "@id": "https://w3id.org/ro/crate/1.2"
+            }
+        },
+        {
+            "@id": "https://w3id.org/workflowhub/workflow-ro-crate#snakemake",
+            "@type": "ComputerLanguage",
+            "name": "Snakemake",
+            "url": {
+                "@id": "https://snakemake.readthedocs.io/"
+            },
+            "version": "9.21.0"
+        },
+        {
+            "@id": "Snakefile",
+            "@type": [
+                "File",
+                "SoftwareSourceCode",
+                "ComputationalWorkflow"
+            ],
+            "contentSize": "1827",
+            "description": "Replication pipeline (Snakemake): download, clean, analyse, figures.",
+            "encodingFormat": "text/x-snakemake",
+            "name": "Snakefile",
+            "programmingLanguage": {
+                "@id": "https://w3id.org/workflowhub/workflow-ro-crate#snakemake"
+            }
+        },
+        {
+            "@id": "https://w3id.org/workflowhub/workflow-ro-crate#galaxy",
+            "@type": "ComputerLanguage",
+            "name": "Galaxy",
+            "url": {
+                "@id": "https://galaxyproject.org/"
+            },
+            "version": "26.1"
+        },
+        {
+            "@id": "workflow/main_workflow.ga",
+            "@type": [
+                "File",
+                "SoftwareSourceCode",
+                "ComputationalWorkflow"
+            ],
+            "contentSize": "18167",
+            "description": "Galaxy workflow: BioImage Model Zoo nucleus-segmentation model applied unchanged to Landsat scenes.",
+            "encodingFormat": "application/json",
+            "name": "workflow/main_workflow.ga",
+            "programmingLanguage": {
+                "@id": "https://w3id.org/workflowhub/workflow-ro-crate#galaxy"
+            }
+        },
+        {
+            "@id": "notebooks/01_data_download.py",
+            "@type": "File",
+            "contentSize": "4048",
+            "description": "Notebook 01_data_download (jupytext)",
+            "encodingFormat": "text/x-python",
+            "name": "notebooks/01_data_download.py"
+        },
+        {
+            "@id": "notebooks/02_data_clean.py",
+            "@type": "File",
+            "contentSize": "2395",
+            "description": "Notebook 02_data_clean (jupytext)",
+            "encodingFormat": "text/x-python",
+            "name": "notebooks/02_data_clean.py"
+        },
+        {
+            "@id": "notebooks/03_analysis.py",
+            "@type": "File",
+            "contentSize": "3620",
+            "description": "Notebook 03_analysis (jupytext)",
+            "encodingFormat": "text/x-python",
+            "name": "notebooks/03_analysis.py"
+        },
+        {
+            "@id": "notebooks/04_figures.py",
+            "@type": "File",
+            "contentSize": "2921",
+            "description": "Notebook 04_figures (jupytext)",
+            "encodingFormat": "text/x-python",
+            "name": "notebooks/04_figures.py"
+        },
+        {
+            "@id": "pixi.toml",
+            "@type": "File",
+            "contentSize": "2126",
+            "description": "Pixi manifest: declared dependencies",
+            "encodingFormat": "application/toml",
+            "name": "pixi.toml"
+        },
+        {
+            "@id": "Dockerfile",
+            "@type": "File",
+            "contentSize": "732",
+            "description": "Container build specification",
+            "encodingFormat": "text/plain",
+            "name": "Dockerfile"
+        },
+        {
+            "@id": "results/galaxy_provenance.json",
+            "@type": "File",
+            "contentSize": "1054",
+            "description": "Result galaxy_provenance",
+            "encodingFormat": "application/json",
+            "name": "results/galaxy_provenance.json"
+        },
+        {
+            "@id": "figures/main_result.png",
+            "@type": "File",
+            "contentSize": "780472",
+            "description": "Main figure",
+            "encodingFormat": "image/png",
+            "name": "figures/main_result.png"
+        },
+        {
+            "@id": "figures/robustness.png",
+            "@type": "File",
+            "contentSize": "45180",
+            "description": "Robustness across five summers",
+            "encodingFormat": "image/png",
+            "name": "figures/robustness.png"
+        },
+        {
+            "@id": "https://doi.org/10.5281/zenodo.6647674",
+            "@type": "File",
+            "description": "BioImage Model Zoo NucleiSegmentationBoundaryModel (trained on fluorescence microscopy)",
+            "encodingFormat": "text/html",
+            "license": {
+                "@id": "https://creativecommons.org/licenses/by/4.0/"
+            },
+            "name": "BioImage Model Zoo NucleiSegmentationBoundaryModel (trained on fluorescence microscopy)",
+            "sdDatePublished": "2026-10-24"
+        },
+        {
+            "@id": "https://planetarycomputer.microsoft.com/dataset/landsat-c2-l2",
+            "@type": "File",
+            "description": "Landsat Collection 2 Level-2 scenes (Microsoft Planetary Computer)",
+            "encodingFormat": "text/html",
+            "name": "Landsat Collection 2 Level-2 scenes (Microsoft Planetary Computer)",
+            "sdDatePublished": "2026-10-24"
+        },
+        {
+            "@id": "https://ror.org/02a8eka68",
+            "@type": "Organization",
+            "name": "LifeWatch ERIC",
+            "url": "https://www.lifewatch.eu/"
+        },
+        {
+            "@id": "https://orcid.org/0000-0002-1784-2920",
+            "@type": "Person",
+            "affiliation": "Lifewatch ERIC",
+            "name": "Anne Fouilloux"
+        },
+        {
+            "@id": "https://ror.org/00k4n6c32",
+            "@type": "Organization",
+            "name": "European Commission",
+            "url": "https://commission.europa.eu/"
+        },
+        {
+            "@id": "https://cordis.europa.eu/project/id/101129751",
+            "@type": "Grant",
+            "funder": {
+                "@id": "https://ror.org/00k4n6c32"
+            },
+            "identifier": "101129751",
+            "name": "OSCARS: Open Science Clusters' Action for Research and Society"
+        },
+        {
+            "@id": "https://spdx.org/licenses/MIT",
+            "@type": "CreativeWork",
+            "description": "MIT licence for the code.",
+            "name": "MIT License"
+        },
+        {
+            "@id": "https://w3id.org/np/RAQXwdUrfZ40k2MdeDv9fokzyh35UKuN3w17G2yO4Wm8A",
+            "@type": [
+                "CreativeWork",
+                "Profile"
+            ],
+            "description": "The FAIR Enabling Resources the Earth-observation community of OSCARS-FIESTA agreed to use.",
+            "name": "FAIR Implementation Profile: Earth Observation (OSCARS-FIESTA), v1.0.2"
+        },
+        {
+            "@id": "#study-area",
+            "@type": "Place",
+            "geo": {
+                "@id": "#study-area-box"
+            },
+            "name": "Alaska Arctic Coastal Plain (thermokarst ponds)"
+        },
+        {
+            "@id": "#study-area-box",
+            "@type": "GeoShape",
+            "box": "70.15 -152.7 70.5 -151.7",
+            "name": "Bounding box of Alaska Arctic Coastal Plain (thermokarst ponds)"
+        },
+        {
+            "@id": "#version-doi",
+            "@type": "PropertyValue",
+            "name": "Version DOI",
+            "propertyID": "https://registry.identifiers.org/registry/doi",
+            "url": "https://doi.org/10.5281/zenodo.20782777",
+            "value": "10.5281/zenodo.20782777"
+        },
+        {
+            "@id": "https://doi.org/10.5281/zenodo.20782777",
+            "@type": "CreativeWork",
+            "description": "Archived release: full source tree, results and figures.",
+            "license": {
+                "@id": "https://spdx.org/licenses/MIT"
+            },
+            "name": "Release v0.1.0 (Zenodo version DOI)"
+        },
+        {
+            "@id": "https://w3id.org/sciencelive/np/RAHSt0SAMA5XrHxNMDwauFeL_zVChpuSPbfyfTJwA2014",
+            "@type": "CreativeWork",
+            "additionalType": "Nanopublication",
+            "encodingFormat": "application/trig",
+            "name": "PICO Research Question (FORRT chain step 01)"
+        },
+        {
+            "@id": "https://w3id.org/sciencelive/np/RAjY2mFqm8B98kq2NmmCX2cjWCEg5Jpb6uLWvuLyXJO_g",
+            "@type": "CreativeWork",
+            "additionalType": "Nanopublication",
+            "encodingFormat": "application/trig",
+            "name": "AIDA Sentence (FORRT chain step 02)"
+        },
+        {
+            "@id": "https://w3id.org/sciencelive/np/RAKk1teclzemmIuU0wUR4hNXE0ZyuCKOQbRhQRVRXMTJA",
+            "@type": "CreativeWork",
+            "additionalType": "Nanopublication",
+            "encodingFormat": "application/trig",
+            "name": "FORRT Claim (FORRT chain step 03)"
+        },
+        {
+            "@id": "https://w3id.org/sciencelive/np/RAzxasLjpd21-0cbBRwlKEbmprb2guev7X3pOhvrPE3yo",
+            "@type": "CreativeWork",
+            "additionalType": "Nanopublication",
+            "encodingFormat": "application/trig",
+            "name": "FORRT Replication Study (FORRT chain step 04)"
+        },
+        {
+            "@id": "https://w3id.org/sciencelive/np/RA0djoTfiMWeJJs7YSlUorGPs5sqRJLwpLPPBYHKSfrmQ",
+            "@type": "CreativeWork",
+            "additionalType": "Nanopublication",
+            "encodingFormat": "application/trig",
+            "name": "FORRT Replication Outcome (FORRT chain step 05)"
+        },
+        {
+            "@id": "https://w3id.org/sciencelive/np/RAMxuAhHzl1FLSr6_X5gYBibgBbN9Jh-fDdJfFcfCM6E0",
+            "@type": "CreativeWork",
+            "additionalType": "Nanopublication",
+            "encodingFormat": "application/trig",
+            "name": "CiTO Citation (FORRT chain step 06)"
+        },
+        {
+            "@id": "https://gxy.io/GTN:T00500",
+            "@type": "CreativeWork",
+            "name": "Using BioImage.IO models for image analysis in Galaxy (Galaxy Training Network)"
+        },
+        {
+            "@id": "https://w3id.org/ro/crate/1.2",
+            "@type": "CreativeWork",
+            "name": "https://w3id.org/ro/crate/1.2"
+        },
+        {
+            "@id": "https://snakemake.readthedocs.io/",
+            "@type": "CreativeWork",
+            "name": "Snakemake documentation"
+        },
+        {
+            "@id": "https://galaxyproject.org/",
+            "@type": "CreativeWork",
+            "name": "https://galaxyproject.org/"
+        },
+        {
+            "@id": "https://creativecommons.org/licenses/by/4.0/",
+            "@type": "CreativeWork",
+            "name": "Creative Commons Attribution 4.0 International"
+        }
+    ]
 }
